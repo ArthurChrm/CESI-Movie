@@ -34,7 +34,7 @@
 
 <div class="container">
     <div style="display: flex; overflow: overlay;">
-        @for($images as $image) 
+        @foreach($images as $image)
         <div class="pl-2">
             <div class="card" style="width: 10rem;">
                 <img class="card-img-top" src={{ URL::to('/uploads/'. $image->image_link ) }} alt="Card image cap">
@@ -44,22 +44,22 @@
                     <a href="/image/modifier" class="btn btn-outline-secondary">Modifier</a>
                 </div>
             </div>
-    </div>
-    @endforeach
-    <div class="col">
-        <div class="card" style="width: 10rem;">
-            <img class="card-img-top" src={{ URL::to('/images/ajout_element.png') }} alt="Card image cap">
-            <div class="card-body">
+        </div>
+        @endforeach
+        <div class="col">
+            <div class="card" style="width: 10rem;">
+                <img class="card-img-top" src={{ URL::to('/images/ajout_element.png') }} alt="Card image cap">
+                <div class="card-body">
                     <form method="GET" action="/image/create" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                        <input type='hidden' name='projet' value={{$projet->id}} />
+                            <input type='hidden' name='projet' value={{$projet->id}} />
                         </div>
                         <button type="submit" class="btn btn-outline-secondary">Ajouter une image</button>
                     </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 @endsection
