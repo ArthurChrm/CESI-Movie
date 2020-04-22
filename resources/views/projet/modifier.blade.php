@@ -1,6 +1,8 @@
 @extends('layout')
 
 @section('body')
+<h1>{{$projet->nom_projet}}</h1>
+
 <div id="fenetre_d_affichage" class="text-center">
     <img class="img-fluid" src={{ URL::to('/images/placeholder2.png') }} alt="Card image cap" style="height: 300px">
 </div>
@@ -43,6 +45,20 @@
             </div>
     </div>
     @endfor
+    <div class="col">
+        <div class="card" style="width: 10rem;">
+            <img class="card-img-top" src={{ URL::to('/images/ajout_element.png') }} alt="Card image cap">
+            <div class="card-body">
+                    <form method="GET" action="/image/create" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                        <input type='hidden' name='projet' value={{$projet->id}} />
+                        </div>
+                        <button type="submit" class="btn btn-outline-secondary">Ajouter une image</button>
+                    </form>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
 @endsection

@@ -19,15 +19,15 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/projet/modifier', function () {
-    return view('/projet/modifier');
-});
+Route::get('/projet/modifier/{id}', "ProjetController@index");
 
 Route::get('/projet/create', function () {
     return view('projet/create');
 });
 Route::POST("/projet/create", "ProjetController@store")->name("store_projet");
 
+Route::get('/image/create', 'ImageController@create');
+Route::post('/image/create', "ImageController@store")->name("store_image");
 Route::get('/image/modifier', function () {
     return view('image/modifier');
 });

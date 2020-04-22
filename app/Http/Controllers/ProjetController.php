@@ -15,4 +15,10 @@ class ProjetController extends Controller
     
         return redirect("/");
     }
+
+    public function index($idProjet){
+        return view("/projet/modifier",[
+            'projet'=> Projet::findOrFail($idProjet)
+        ]);
+    }
 }
