@@ -6,7 +6,8 @@
 
 <div class="container">
     <div class="row">
-        @for($i = 0; $i <= 10; $i++) <div class="col">
+        @for($i = 0; $i <= 10; $i++) 
+        <div class="col">
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src={{ URL::to('/images/placeholder.png') }} alt="Card image cap">
                 <div class="card-body">
