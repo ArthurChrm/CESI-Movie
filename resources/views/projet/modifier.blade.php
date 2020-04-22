@@ -37,7 +37,9 @@
         @foreach($images as $image)
         <div class="pl-2">
             <div class="card" style="width: 10rem;">
-                <img class="card-img-top" src={{ URL::to('/uploads/'. $image->image_link ) }} alt="Card image cap">
+            <div style="height: 8em; overflow: hidden">
+                <img class="card-img-top img-thumbnail" style="object-fit: cover" src={{ URL::to('/uploads/'. $image->image_link ) }} alt="Card image cap">
+            </div>
                 <div class="card-body">
                     <h5 class="card-title">Durée : 2s</h5>
                     <p class="card-text">Zoom : </p>
