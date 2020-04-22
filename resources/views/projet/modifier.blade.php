@@ -38,7 +38,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Durée : 2s</h5>
                     <p class="card-text">Zoom : </p>
-                    <a href="/modifier" class="btn btn-outline-secondary">Modifier</a>
+                    <a href="/image/modifier" class="btn btn-outline-secondary">Modifier</a>
                 </div>
             </div>
     </div>

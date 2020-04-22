@@ -24,7 +24,7 @@
                 <a class="p-2 text-dark" href="#">Menu 3</a>
                 <a class="p-2 text-dark" href="#">Menu 4</a>
             </nav>
-            <a class="btn btn-outline-primary" href="#">Créer un projet</a>
+            <a class="btn btn-outline-primary" href="/projet/create">Créer un projet</a>
         </div>
     </header>
 </head>

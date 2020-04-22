@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Projet test</h5>
                     <p class="card-text">Descrition du projet.</p>
-                    <a href="/modifier" class="btn btn-primary">Go !</a>
+                    <a href="/projet/modifier" class="btn btn-primary">Go !</a>
                 </div>
             </div>
     </div>

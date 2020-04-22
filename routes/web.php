@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/modifier', function () {
-    return view('modifier');
+Route::get('/projet/modifier', function () {
+    return view('/projet/modifier');
+});
+
+Route::get('/projet/create', function () {
+    return view('projet/create');
+});
+
+Route::get('/image/modifier', function () {
+    return view('image/modifier');
 });
