@@ -1,13 +1,13 @@
 @extends('layout')
 
 @section('body')
-<h1>Bonjour !</h1>
+<h1>Mes projets</h1>
 
 
-<div class="container">
-    <div class="row">
+<div class="container" >
+    <div class="row" style="display: flex; justify-content: space-evenly;">
         @foreach($projets as $projet) 
-        <div class="col">
+        <div>
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src={{ URL::to('/images/placeholder.png') }} alt="Card image cap">
                 <div class="card-body">
