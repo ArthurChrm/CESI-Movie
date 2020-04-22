@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('body')
-<div id="fenetre_d_affichage" class="text-center">
-    <img class="img-fluid" src={{ URL::to('/images/placeholder2.png') }} alt="Card image cap" style="height: 300px">
+<div id="fenetre_d_affichage" class="text-center" style="max-height: 37em">
+    <img class="img-fluid" src={{ URL::to('/images/placeholder2.png') }} alt="Card image cap" style="height: 37em">
 </div>
 
 <div id='boutons_controles' class="text-center">
@@ -31,8 +31,9 @@
 
 
 <div class="container">
-    <div class="row">
-        @for($i = 0; $i <= 10; $i++) <div class="col">
+    <div style="display: flex; overflow: overlay;">
+        @for($i = 0; $i <= 10; $i++) 
+        <div class="pl-2">
             <div class="card" style="width: 10rem;">
                 <img class="card-img-top" src={{ URL::to('/images/placeholder.png') }} alt="Card image cap">
                 <div class="card-body">
