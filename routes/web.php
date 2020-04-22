@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        'projets' => App\Projet::latest()->get()
+    ]);
 });
 
 Route::get('/projet/modifier', function () {
@@ -24,7 +26,10 @@ Route::get('/projet/modifier', function () {
 Route::get('/projet/create', function () {
     return view('projet/create');
 });
+Route::POST("/projet/create", "ProjetController@store")->name("store_projet");
 
 Route::get('/image/modifier', function () {
     return view('image/modifier');
 });
+
+
