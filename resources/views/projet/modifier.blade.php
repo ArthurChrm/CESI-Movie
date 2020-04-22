@@ -34,9 +34,9 @@
 
 <div class="container">
     <div class="row">
-        @for($i = 0; $i <= 10; $i++) <div class="col">
+        @foreach($images as $image) <div class="col">
             <div class="card" style="width: 10rem;">
-                <img class="card-img-top" src={{ URL::to('/images/placeholder.png') }} alt="Card image cap">
+                <img class="card-img-top" src={{ URL::to('/uploads/'. $image->image_link ) }} alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Durée : 2s</h5>
                     <p class="card-text">Zoom : </p>
@@ -44,7 +44,7 @@
                 </div>
             </div>
     </div>
-    @endfor
+    @endforeach
     <div class="col">
         <div class="card" style="width: 10rem;">
             <img class="card-img-top" src={{ URL::to('/images/ajout_element.png') }} alt="Card image cap">
