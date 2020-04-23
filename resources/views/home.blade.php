@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$projet->nom_projet}}</h5>
                     <p class="card-text">{{$projet->description}}</p>
-                    <a href="/projet/modifier/{{$projet->id}}" class="btn btn-primary">Go !</a>
+                    <a href="/projet/modifier/{{$projet->id}}" class="btn btn-primary">Ouvrir</a>
                 </div>
             </div>
     </div>

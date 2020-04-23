@@ -22,26 +22,36 @@
                 </div>
 
                 <div class="form-group pt-4">
-                    <label for="duree_image"><h2>Durée d'apparition :
-                        <output name="dureeOutput" id="dureeOutputId">{{$image->image_duree}}</output>
-                    s</h2></label>
-                    <input class="custom-range" type="range" id="duree_image" name="duree_image" value={{$image->image_duree}} min="0.5" max="10" step="0.5" oninput="dureeOutputId.value = duree_image.value">
+                    <label for="duree_image">
+                        <h2>Durée d'apparition :
+                            <output name="dureeOutput" id="dureeOutputId">{{$image->image_duree}}</output>
+                            s</h2>
+                    </label>
+                    <input class="custom-range" type="range" id="duree_image" name="duree_image" value={{$image->image_duree}} min="0.5" max="10" step="0.5" oninput="dureeOutput.value = duree_image.value">
                 </div>
 
                 <h2>Fin du zoom</h2>
                 <div class="form-group">
                     <label for="posX">Coordonnée X de l'image</label>
                     <input class="form-control" type="text" id="posX" name="posX" value='{{$image->positionX_fin_zoom}}' disabled>
-                    <small id="posXHelp" class="form-text text-muted">Cliquez sur l'image</small>
 
                     <label for="posY">Coordonnée Y de l'image</label>
                     <input class="form-control" type="text" id="posY" name="posY" value='{{$image->positionY_fin_zoom}}' disabled>
-                    <small id="posYHelp" class="form-text text-muted">Cliquez sur l'image</small>
+                    <small id="posYHelp" class="form-text text-muted">Cliquez sur l'image pour modifier les coordonées</small>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" type="text" id="posX" name="posX" value='{{$image->positionX_fin_zoom}}'>
+                    <input type="hidden" type="text" id="posY" name="posY" value='{{$image->positionY_fin_zoom}}'>
                 </div>
 
+
                 <div class="form-group">
-                    <input type="hidden" type="text" id="posX" name="posX" value='{{$image->positionX_fin_zoom}}'>                
-                    <input type="hidden" type="text" id="posY" name="posY" value='{{$image->positionY_fin_zoom}}'>
+                    <label for="duree_image">
+                        <h2>Niveau du zoom :
+                            <output name="niveauZoom_output" id="dureeOutputId">{{$image->niveau_zoom}}</output>
+                        </h2>
+                    </label>
+                    <input class="custom-range" type="range" id="niveau_zoom" name="niveau_zoom" value={{$image->niveau_zoom}} min="1" max="10" step="0.5" oninput="niveauZoom_output.value = niveau_zoom.value">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Modifier</button>

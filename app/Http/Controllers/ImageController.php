@@ -23,6 +23,7 @@ class ImageController extends Controller
         $image->image_link = $fileName;
         $image->image_duree = request()->duree_image;
         $image->projets_id = request()->id_projet;
+        $image->niveau_zoom = 1;
         $image->save();
 
         return redirect("/projet/modifier/" . request()->id_projet);
@@ -53,6 +54,7 @@ class ImageController extends Controller
         $image->image_duree = request()->duree_image;
         $image->positionX_fin_zoom = request()->posX;
         $image->positionY_fin_zoom = request()->posY;
+        $image->niveau_zoom = request()->niveau_zoom;
         $image->save();
 
         return redirect("/");
