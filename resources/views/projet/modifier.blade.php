@@ -41,7 +41,7 @@
                 <img class="card-img-top img-thumbnail" style="object-fit: cover" src={{ URL::to('/uploads/'. $image->image_link ) }} alt="Card image cap">
             </div>
                 <div class="card-body">
-                    <h5 class="card-title">Durée : 2s</h5>
+                    <h5 class="card-title">Durée : {{$image->image_duree}}s</h5>
                     <p class="card-text">Zoom : </p>
 
                     <form method="GET" action="/image/modifier" enctype="multipart/form-data">

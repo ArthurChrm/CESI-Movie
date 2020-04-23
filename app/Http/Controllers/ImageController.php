@@ -25,7 +25,7 @@ class ImageController extends Controller
         $image->projets_id = request()->id_projet;
         $image->save();
 
-        return redirect("/projet/modifier/".request()->id_projet);
+        return redirect("/projet/modifier/" . request()->id_projet);
     }
 
     public function create()
@@ -38,11 +38,21 @@ class ImageController extends Controller
         );
     }
 
-    public function update(){
+    public function update()
+    {
         $image_id = request()->image;
 
         return view("image/modifier", [
-            'image_id' => $image_id
+            'image' => Image::findOrFail($image_id)
         ]);
+    }
+
+    public function update_post()
+    {
+        $image = Image::findOrFail(request()->image_id);
+        $image->image_duree = request()->duree_image;
+        $image->save();
+
+        return redirect("/");
     }
 }
