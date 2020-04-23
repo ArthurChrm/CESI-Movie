@@ -43,7 +43,16 @@
                 <div class="card-body">
                     <h5 class="card-title">Durée : 2s</h5>
                     <p class="card-text">Zoom : </p>
-                    <a href="/image/modifier" class="btn btn-outline-secondary">Modifier</a>
+
+                    <form method="GET" action="/image/modifier" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <input type='hidden' name='image' value={{$image->id}} />
+                        </div>
+                        <button type="submit" class="btn btn-outline-secondary">Modifier</button>
+                    </form>
+
+                    {{-- <a href="/image/modifier" class="btn btn-outline-secondary">Modifier</a> --}}
                 </div>
             </div>
         </div>

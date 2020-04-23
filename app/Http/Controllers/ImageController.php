@@ -37,4 +37,12 @@ class ImageController extends Controller
             ]
         );
     }
+
+    public function update(){
+        $image_id = request()->image;
+
+        return view("image/modifier", [
+            'image_id' => $image_id
+        ]);
+    }
 }
