@@ -19,10 +19,7 @@
             {{-- <h5 class="my-0 mr-md-auto font-weight-normal">CESI Movie</h5> --}}
             <h5 class="my-0 mr-md-auto font-weight-normal"><a href="/">CESI Movie</a></h5>
             <nav class="my-2 my-md-0 mr-md-3">
-                <a class="p-2 text-dark" href="#">Menu 1</a>
-                <a class="p-2 text-dark" href="#">Menu 2</a>
-                <a class="p-2 text-dark" href="#">Menu 3</a>
-                <a class="p-2 text-dark" href="#">Menu 4</a>
+                <a class="p-2 text-dark" href="/apropos">A propos</a>
             </nav>
             <a class="btn btn-outline-primary" href="/projet/create">Créer un projet</a>
         </div>

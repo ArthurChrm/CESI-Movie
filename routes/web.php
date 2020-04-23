@@ -31,3 +31,6 @@ Route::post('/image/create', "ImageController@store")->name("store_image");
 Route::get('/image/modifier', "ImageController@update")->name('update_image');
 Route::post('/image/modifier', "ImageController@update_post")->name('update_image_post');
 
+Route::get('/apropos', function () {
+    return view('apropos');
+});
