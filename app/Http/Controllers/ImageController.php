@@ -12,9 +12,9 @@ class ImageController extends Controller
 {
     public function store()
     {
-        // $request->validate([
-        //     'file' => 'required|mimes:pdf,xlx,csv|max:2048',
-        // ]);
+        request()->validate([
+            'image' => 'required|mimes:png,jpg,jpeg,gif|max:10000',
+        ]);
 
         $fileName = time() . '.' . Request()->image->extension();
         Request()->image->move(public_path('uploads'), $fileName);

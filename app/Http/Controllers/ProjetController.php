@@ -10,6 +10,10 @@ class ProjetController extends Controller
 {
     public function store()
     {
+        if(request()->nom_projet == null || request()->description == null){
+            return redirect('/projet/create');
+        }
+        
         $projet = new Projet();
         $projet->nom_projet = request()->nom_projet;
         $projet->description = request()->description;
