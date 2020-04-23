@@ -51,6 +51,8 @@ class ImageController extends Controller
     {
         $image = Image::findOrFail(request()->image_id);
         $image->image_duree = request()->duree_image;
+        $image->positionX_fin_zoom = request()->posX;
+        $image->positionY_fin_zoom = request()->posY;
         $image->save();
 
         return redirect("/");

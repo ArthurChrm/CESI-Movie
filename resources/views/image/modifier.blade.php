@@ -22,25 +22,29 @@
                 </div>
 
                 <div class="form-group pt-4">
-                    <label for="duree_image">Durée d'apparition (en secondes):
+                    <label for="duree_image"><h2>Durée d'apparition :
                         <output name="dureeOutput" id="dureeOutputId">{{$image->image_duree}}</output>
-                    </label>
+                    s</h2></label>
                     <input class="custom-range" type="range" id="duree_image" name="duree_image" value={{$image->image_duree}} min="0.5" max="10" step="0.5" oninput="dureeOutputId.value = duree_image.value">
                 </div>
 
-                <div class="form-group pt-4">
+                <h2>Fin du zoom</h2>
+                <div class="form-group">
                     <label for="posX">Coordonnée X de l'image</label>
-
-                    <input class="custom-range" type="text" id="posX" name="posX" disabled>
+                    <input class="form-control" type="text" id="posX" name="posX" value='{{$image->positionX_fin_zoom}}' disabled>
                     <small id="posXHelp" class="form-text text-muted">Cliquez sur l'image</small>
 
                     <label for="posY">Coordonnée Y de l'image</label>
-                    <input class="custom-range" type="text" id="posY" name="posY" disabled>
+                    <input class="form-control" type="text" id="posY" name="posY" value='{{$image->positionY_fin_zoom}}' disabled>
                     <small id="posYHelp" class="form-text text-muted">Cliquez sur l'image</small>
-
                 </div>
 
-                <button type="submit" class="btn btn-primary">Ajouter</button>
+                <div class="form-group">
+                    <input type="hidden" type="text" id="posX" name="posX" value='{{$image->positionX_fin_zoom}}'>                
+                    <input type="hidden" type="text" id="posY" name="posY" value='{{$image->positionY_fin_zoom}}'>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Modifier</button>
             </form>
 
         </div>

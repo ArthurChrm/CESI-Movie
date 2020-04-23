@@ -17,10 +17,8 @@ class CreateImageTable extends Migration
             $table->id();
             $table->string('image_link');
             $table->float('image_duree')->nullable();
-            $table->float('temps_debut_zoom')->nullable();
-            $table->float('temps_fin_zoom')->nullable();
-            $table->float('position_debut_zoom')->nullable();
-            $table->float('position_fin_zoom')->nullable();
+            $table->integer('positionX_fin_zoom')->nullable();
+            $table->integer('positionY_fin_zoom')->nullable();
             $table->timestamps();
         });
     }
