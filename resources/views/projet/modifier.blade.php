@@ -1,8 +1,9 @@
 @extends('layout')
 
 @section('body')
-<h1>{{$projet->nom_projet}}</h1>
-
+<div class="container">
+    <h1>{{$projet->nom_projet}}</h1>
+</div>
 <div id="fenetre_d_affichage" class="text-center" style="max-height: 37em">
     <img class="img-fluid" src={{ URL::to('/images/placeholder2.png') }} alt="Card image cap" style="height: 37em">
 </div>
@@ -37,12 +38,12 @@
         @foreach($images as $image)
         <div class="pl-2">
             <div class="card" style="width: 10rem;">
-            <div style="height: 8em; overflow: hidden">
-                <img class="card-img-top img-thumbnail" style="object-fit: cover" src={{ URL::to('/uploads/'. $image->image_link ) }} alt="Card image cap">
-            </div>
+                <div style="height: 8em; overflow: hidden">
+                    <img class="card-img-top img-thumbnail" style="object-fit: cover" src={{ URL::to('/uploads/'. $image->image_link ) }} alt="Card image cap">
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Durée : {{$image->image_duree}}s</h5>
-                    <p class="card-text">Zoom : </p>
+                    <p class="card-title">Durée : {{$image->image_duree}}s</p>
+                    <p class="card-text">Zoom : {{$image->niveau_zoom}}x</p>
 
                     <form method="GET" action="/image/modifier" enctype="multipart/form-data">
                         @csrf

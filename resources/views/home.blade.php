@@ -1,10 +1,11 @@
 @extends('layout')
 
 @section('body')
-<h1>Mes projets</h1>
+
 
 
 <div class="container" >
+    <h1>Projets</h1>
     <div class="row" style="display: flex; justify-content: space-evenly;">
         @foreach($projets as $projet) 
         <div>

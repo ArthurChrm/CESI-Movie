@@ -49,7 +49,7 @@
                     <label for="duree_image">
                         <h2>Niveau du zoom :
                             <output name="niveauZoom_output" id="dureeOutputId">{{$image->niveau_zoom}}</output>
-                        </h2>
+                        x</h2>
                     </label>
                     <input class="custom-range" type="range" id="niveau_zoom" name="niveau_zoom" value={{$image->niveau_zoom}} min="1" max="10" step="0.5" oninput="niveauZoom_output.value = niveau_zoom.value">
                 </div>
