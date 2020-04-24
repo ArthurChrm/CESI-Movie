@@ -6,3 +6,7 @@ Le développement a été réalisé sous Laravel.
 ## Développeurs
 
 Le développement de ce projet a été réalisé par Antoine CORGNIARD et Arthur CHERAMY.
+
+## Procédures d'installation
+
+Les différentes procédures d'installation sont disponibles dans le Wiki de ce dépôt
