@@ -75,3 +75,8 @@
     </div>
 </div>
 @endsection
+
+<script>
+    var array = {!! $images_js !!};
+    console.log(array);
+</script>
