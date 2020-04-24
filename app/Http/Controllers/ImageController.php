@@ -23,7 +23,9 @@ class ImageController extends Controller
         $image->image_link = $fileName;
         $image->image_duree = request()->duree_image;
         $image->projets_id = request()->id_projet;
-        $image->niveau_zoom = 1.0;
+        $image->positionX_fin_zoom = 0.5;
+        $image->positionY_fin_zoom = 0.5;
+        $image->niveau_zoom = 1;
         $image->save();
 
         return redirect("/projet/modifier/" . request()->id_projet);
@@ -52,8 +54,29 @@ class ImageController extends Controller
     {
         $image = Image::findOrFail(request()->image_id);
         $image->image_duree = request()->duree_image;
-        $image->positionX_fin_zoom = request()->posX;
-        $image->positionY_fin_zoom = request()->posY;
+
+        if (request()->zoomdezoom == 'zoom') {
+            $image->zoom = true;
+        } else {
+            $image->zoom = false;
+        }
+
+        if (request()->posX >= 1) {
+            $image->positionX_fin_zoom = 0.99;
+        } else if (request()->posX <= 0) {
+            $image->positionX_fin_zoom = 0.1;
+        } else {
+            $image->positionX_fin_zoom = request()->posX;
+        }
+
+        if (request()->posY >= 1) {
+            $image->positionY_fin_zoom = 0.99;
+        } else if (request()->posY <= 0) {
+            $image->positionY_fin_zoom = 0.1;
+        } else {
+            $image->positionY_fin_zoom = request()->posY;
+        }
+
         $image->niveau_zoom = request()->niveau_zoom;
         $image->save();
 
