@@ -26,9 +26,7 @@ class ProjetController extends Controller
     {
         return view("/projet/modifier", [
             'projet' => Projet::findOrFail($idProjet),
-            'images' => Image::select('id', 'image_link', 'image_duree', 'niveau_zoom')
-                ->where('projets_id', '=', $idProjet)
-                ->get()
+            'images' => Image::where('projets_id', '=', $idProjet)->get()
         ]);
     }
 }
