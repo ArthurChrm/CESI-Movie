@@ -39,7 +39,7 @@
     <div style="display: flex; overflow: overlay;">
         @foreach($images as $image)
         <div class="pl-2">
-            <div class="card" style="width: 10rem;">
+            <div class="card" style="width: 10rem; height: 17em">
                 <div style="height: 8em; overflow: hidden">
                     <img class="card-img-top img-thumbnail" style="object-fit: cover" src={{ URL::to('/uploads/'. $image->image_link ) }} alt="Card image cap">
                 </div>
@@ -61,7 +61,7 @@
         </div>
         @endforeach
         <div class="col">
-            <div class="card" style="width: 10rem;">
+            <div class="card" style="width: 10rem; height: 17em">
                 <img class="card-img-top" src={{ URL::to('/images/ajout_element.png') }} alt="Card image cap">
                 <div class="card-body">
                     <form method="GET" action="/image/create" enctype="multipart/form-data">
