@@ -80,6 +80,6 @@ class ImageController extends Controller
         $image->niveau_zoom = request()->niveau_zoom;
         $image->save();
 
-        return redirect("/");
+        return redirect("/projet/modifier/".$image->projets_id);
     }
 }
