@@ -17,7 +17,7 @@ Une démonstration de ce projet est disponible sur [Youtube](https://www.youtube
 
 ## Etat de l'avancement
 
-Vous retrouverez ci-dessous une liste des fonctionnalités réalisés dans ce projet, ainsi que les fonctionnalités manquantes.
+Vous retrouverez ci-dessous une liste des fonctionnalités réalisées dans ce projet, ainsi que les fonctionnalités manquantes.
 
 Fait :
 - Création d'un projet unique
