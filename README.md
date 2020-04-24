@@ -9,4 +9,8 @@ Le développement de ce projet a été réalisé par Antoine CORGNIARD et Arthur
 
 ## Procédures d'installation
 
-Les différentes procédures d'installation sont disponibles dans le Wiki de ce dépôt
+Les différentes procédures d'installation sont disponibles dans le Wiki de ce dépôt.
+
+## Démonstration
+
+Une démonstration de ce projet est disponible sur [Youtube](https://www.youtube.com/watch?v=s4i_DBm2beI).
