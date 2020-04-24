@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-sm">
       <h1>Développeurs</h1>
-      <p>Ce site a été développé par Antoine Corgniard et Arthur CHERAMY</p>
+      <p>Ce site a été développé par Antoine CORGNIARD et Arthur CHERAMY</p>
     </div>
     <div class="col-sm">
       <h1>Contexte</h1>
